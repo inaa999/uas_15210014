@@ -1,0 +1,32 @@
+ion-card {
+  margin: 10px; /* Adjust margin as needed */
+  box-shadow: 0 4px 8px rgba(156, 239, 148, 0.941); /* Add a subtle box shadow for depth */
+}
+ion-header {
+	--background: linear-gradient(to bottom, #00e51f, #6bc091);
+	color: #ffffff;
+  }
+  
+  .custom-header {
+	--background: linear-gradient(to bottom, #00e51f, #7abe99);
+	--ion-color-base: #fff;
+	font-family: 'Agbalumo', sans-serif;
+  }
+  
+
+
+ion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 8px; /* Adjust margin between items as needed */
+}
+
+ion-label {
+  font-weight: bold;
+  margin-bottom: 4px; /* Adjust margin between labels as needed */
+}
+
+ion-button {
+  margin-right: 8px; /* Adjust margin between buttons as needed */
+}

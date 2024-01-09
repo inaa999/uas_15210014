@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar class="custom-header">
+      <ion-title class="ion-text-light custom-title text-center">blok</ion-title>
+      <ion-buttons slot="start" color="light" class="custom-menu-button">
+        <ion-menu-button style="color:white"></ion-menu-button>
+      </ion-buttons>    
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content style="--background: url('../../assets/bg1.jpg') center center / cover no-repeat;" [fullscreen]="true">
+    <ion-refresher slot="fixed">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  
+
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <!-- Form Search Nama Blok -->
+  <ion-card class="form-wrapper">
+    <ion-card-content>
+      <h3></h3>
+      <div class="InputContainer">
+        <ion-searchbar
+          [(ngModel)]="searchNamaBlok"
+          (ionChange)="searchByNamaBlok()"
+          placeholder="Search Nama Blok"
+          showCancelButton="focus"
+          cancelButtonIcon="search-outline"
+        ></ion-searchbar>
+      </div>
+    </ion-card-content>
+  </ion-card>
+     <!-- Tambah Blok Button -->
+
+  <ion-card-content>
+    <ion-button shape="round" expand="" color="success" [routerLink]="['/addblok']">
+      Tambah
+    </ion-button>
+    <ion-button (click)="synchronizeDataAndExportToExcel()">
+      <ion-icon name="download-outline"></ion-icon>
+    </ion-button>
+    <ion-button (click)="viewExportedData()" color="primary">
+      <ion-icon name="bar-chart-outline"></ion-icon>
+    </ion-button>
+  </ion-card-content>
+
+  
+
+  <!-- Blok Data Content -->
+  <ion-card class="notification-card" *ngFor="let data of filteredBlokData">
+    <ion-card-header>
+      <ion-card-title class="white-text">{{ data.kd_blok }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Nama Blok: {{ data.nama_blok }}</p>
+      <p>No Blok: {{ data.no_blok }}</p>
+    </ion-card-content>
+
+    <!-- CRUD Buttons with Icons -->
+    <div class="crud-buttons">
+      <ion-button shape="round" expand="" color="success" (click)="edit(data.kd_blok)">
+        <ion-icon name="create"></ion-icon> Update
+      </ion-button>
+      <ion-button color="danger" (click)="confirmDelete(data.kd_blok)">
+        <ion-icon name="trash-outline"></ion-icon> Delete
+      </ion-button>
+    </div>
+  </ion-card>
+
+

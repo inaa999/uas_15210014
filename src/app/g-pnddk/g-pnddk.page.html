@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-header">
+    <ion-title class="ion-text-light custom-title text-center">Blok</ion-title>
+    <ion-buttons slot="start" color="light" class="custom-menu-button">
+      <ion-menu-button style="color:rgb(35, 163, 52)"></ion-menu-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: url('../../assets/bg1.jpg') center center / cover no-repeat;" [fullscreen]="true">
+  <ion-refresher slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+<ion-content>
+  <div style="width: 400; height: 600; margin-bottom: 12%">
+    <canvas id="myChart"></canvas>
+    <canvas #pendudukChart></canvas>
+  </div>
+  <div class="chart-container">
+    <canvas #myDoughnutChart></canvas>
+  </div>
+</ion-content>

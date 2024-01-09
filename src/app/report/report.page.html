@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-header">
+    <ion-title class="ion-text-light custom-title text-center">pengeluaran</ion-title>
+    <ion-buttons slot="start" color="light" class="custom-menu-button">
+      <ion-menu-button style="color:rgb(64, 144, 72)"></ion-menu-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: url('../../assets/bg1.jpg') center center / cover no-repeat;" [fullscreen]="true">
+  <ion-refresher slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-content>
+    <!-- Bar Chart Canvas -->
+    <canvas id="barChart" width="400" height="400"></canvas>
+    
+    <!-- Pie Chart Canvas -->
+    <canvas id="pieChart" width="400" height="400"></canvas>
+  </ion-content>
+  

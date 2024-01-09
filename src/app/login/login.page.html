@@ -1,0 +1,56 @@
+
+
+<div class="d-flex justify-content-center mb-4">
+ 
+</div>
+
+
+  <div class="card mx-auto" style="width: 400px;">
+    <div class="card-body">
+      <!-- ... (rest of your code) ... -->
+
+      <div class="form-group">
+        <label class="text-white">
+          <ion-icon name="person-outline" style="color: #14A44D;"></ion-icon>
+          Username
+        </label>
+        <input
+          [(ngModel)]="username"
+          class="form-control"
+          placeholder="Masukkan username anda..."
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="text-white">
+          <ion-icon name="lock-closed-outline" style="color: #14A44D;"></ion-icon>
+          Password
+        </label>
+        <div class="input-group">
+          <input
+            [(ngModel)]="password"
+            class="form-control"
+            placeholder="Masukkan password anda..."
+            [type]="passwordType" clearOnEdit="false"
+            required
+          />
+          <div class="input-group-append">
+            <div class="input-group-text d-flex align-items-center justify-content-center" style="background:#14A44D; border: 1px solid #14A44D;">
+              <ion-icon item-end [name]="passwordIcon" class="passwordIcon text-white" (click)='hideShowPassword()' style="font-size: 18px;"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button (click)="login()" class="btn btn-success btn-block">
+        <ion-icon name="" class="mr-2"></ion-icon> Login
+      </button>
+      </div>
+    </div>
+
+    <div class="card-footer text-center">
+      Copyright © Greenland Forest Hill 2023
+    </div>
+  
+

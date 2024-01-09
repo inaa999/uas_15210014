@@ -1,0 +1,37 @@
+<!-- report-info.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Report Info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingText="Pull to refresh"
+      refreshingText="Refreshing..."
+      refreshingSpinner="circles">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bar Chart - Jumlah Info per Judul Info</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas id="barChart" width="400" height="200"></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Pie Chart - Jumlah Info per NIK</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas id="pieChart" width="400" height="200"></canvas>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

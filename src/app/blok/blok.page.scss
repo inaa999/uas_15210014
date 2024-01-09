@@ -1,0 +1,69 @@
+/* Add this CSS to your styles.css or styles.scss file */
+.form-wrapper {
+	background-color: #5c9b45dd; /* Change the color code as per your preference */
+	border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+	margin: 10px; /* Optional: Add margin for spacing */
+  }
+  ion-header {
+	--background: linear-gradient(to bottom, #00e51f, #6bc091);
+	color: #ffffff;
+  }
+  
+  .custom-header {
+	--background: linear-gradient(to bottom, #00e51f, #7abe99);
+	--ion-color-base: #fff;
+	font-family: 'Agbalumo', sans-serif;
+  }
+  
+  .InputContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px; /* Optional: Add padding for spacing */
+  }
+  
+  ion-searchbar {
+	--searchbar-background: transparent; /* Make the search bar background transparent */
+	--searchbar-input-border-color: white; /* Set border color */
+	color: rgb(4, 2, 2); /* Set text color */
+  }
+  
+  ion-searchbar::part(cancel-button) {
+	color: white; /* Set cancel button text color */
+  }
+  
+  ion-searchbar::part(cancel-button-icon) {
+	color: white; /* Set cancel button icon color */
+  }
+  /* Add this CSS to your styles.css or styles.scss file */
+.notification-card {
+	background-color: white; /* Change the color code as per your preference */
+	border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+	margin: 10px; /* Optional: Add margin for spacing */
+  }
+  
+  .notification-card ion-card-header {
+	background-color: #4da45b; /* Change the color code as per your preference */
+	border-top-left-radius: 10px; /* Optional: Add border-radius for rounded corners */
+	border-top-right-radius: 10px; /* Optional: Add border-radius for rounded corners */
+  }
+  
+  .notification-card ion-card-title {
+	color: rgb(0, 0, 0); /* Set text color */
+  }
+  
+  .notification-card ion-card-content {
+	color: rgb(0, 0, 0); /* Set text color */
+  }
+  
+  .crud-buttons ion-button {
+	--ion-text-color: white; /* Set button text color */
+	--background: #88e3bb; /* Change the color code as per your preference */
+	border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+	margin: 5px; /* Optional: Add margin for spacing */
+  }
+  
+  .crud-buttons ion-button ion-icon {
+	--ion-color: white; /* Set icon color */
+  }
+  

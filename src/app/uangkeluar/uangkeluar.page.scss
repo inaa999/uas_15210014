@@ -1,0 +1,37 @@
+/* Add this style to your component's CSS or in your global styles */
+ion-card {
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  ion-header {
+    --background: linear-gradient(to bottom, #00e51f, #6bc091);
+    color: #ffffff;
+    }
+    
+    .custom-header {
+    --background: linear-gradient(to bottom, #00e51f, #7abe99);
+    --ion-color-base: #fff;
+    font-family: 'Agbalumo', sans-serif;
+    }
+    
+  ion-card-header {
+    background-color: #5c9b45dd;
+    color: #fff;
+  }
+  
+  ion-card-content {
+    padding: 10px;
+  }
+  
+  ion-item {
+    margin-bottom: 8px;
+  }
+  
+  ion-button {
+    margin-top: 8px;
+  }
+  
+  .crud-buttons ion-button {
+    margin-right: 8px;
+  }
+  

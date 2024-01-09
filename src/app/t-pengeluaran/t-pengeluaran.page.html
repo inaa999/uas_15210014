@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-header">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title>Create Pengeluaran</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="Back()"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="start" color="light" class="custom-menu-button">
+      <ion-menu-button style="color:aliceblue"></ion-menu-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingText="Pull to refresh"
+      refreshingText="Refreshing..."
+      refreshingSpinner="circles">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label position="floating">Nama Pengeluaran</ion-label>
+      <ion-input [(ngModel)]="nama_pengeluaran" type="text"></ion-input>
+    </ion-item>
+
+    <!-- Add more ion-items for other fields if needed -->
+
+    <ion-button expand="full" color="primary" (click)="createPengeluaran()">Create Pengeluaran</ion-button>
+  </ion-content>
+</ion-content>

@@ -1,0 +1,37 @@
+
+  .crud-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  ion-header {
+    --background: linear-gradient(to bottom, #00e51f, #6bc091);
+    color: #ffffff;
+    }
+    
+    .custom-header {
+    --background: linear-gradient(to bottom, #00e51f, #7abe99);
+    --ion-color-base: #fff;
+    font-family: 'Agbalumo', sans-serif;
+    }
+    
+  .chart-container {
+    margin-top: 20px;
+  }
+  
+  /* Menyesuaikan gaya untuk chart */
+  #myChart {
+    width: 100%;
+    max-width: 600px; /* Sesuaikan lebar chart sesuai kebutuhan */
+    margin: 0 auto;
+  }
+  
+  /* Menyesuaikan warna bar chart */
+  #myChart .bar {
+    transition: background-color green;
+  }
+  
+  #myChart .bar:hover {
+    background-color: #4edaa0; /* Warna yang diinginkan saat hover */
+  }
+  

@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/iuran"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Add Iuran
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label position="floating">Blok</ion-label>
+        <ion-select [(ngModel)]="kd_blok">
+          <ion-select-option *ngFor="let blok of Blok" [value]="blok.kd_blok">{{ blok.nama_blok }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Penduduk</ion-label>
+        <ion-input [(ngModel)]="kd_penduduk"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Jenis Pembayaran</ion-label>
+        <ion-input [(ngModel)]="jenis_pembayaran"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Keterangan</ion-label>
+        <ion-input [(ngModel)]="keterangan"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Tanggal Pembayaran</ion-label>
+        <ion-input type="date" [(ngModel)]="tgl_pembayaran"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Kas Bulan</ion-label>
+        <ion-input [(ngModel)]="kas_bulan"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Kas Tahun</ion-label>
+        <ion-input [(ngModel)]="kas_tahun"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Iuran Foto</ion-label>
+        <input type="file" (change)="getFile($event)"/>
+      </ion-item>
+
+      <!-- Add other form fields as needed -->
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" (click)="Insert()">Insert</ion-button>
+</ion-content>

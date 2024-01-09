@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-header">
+    <ion-title class="ion-text-light custom-title text-center">pengeluaran</ion-title>
+    <ion-buttons slot="start" color="light" class="custom-menu-button">
+      <ion-menu-button style="color:rgb(71, 153, 66)"></ion-menu-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: url('../../assets/bg1.jpg') center center / cover no-repeat;" [fullscreen]="true">
+  <ion-refresher slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+
+<ion-content>
+  <div class="crud-buttons">
+    <ion-button color="primary" [routerLink]="['/adduang']">
+      <ion-icon name="add-circle-outline"></ion-icon>
+      Tambah
+    </ion-button>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let item of uang">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>ID Keluar: {{ item.kd_keluar }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label>ID Pengeluaran:</ion-label>
+              <ion-label>{{ item.kd_pengeluaran }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Keterangan:</ion-label>
+              <ion-label>{{ item.keterangan }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Bukti:</ion-label>
+              <ion-label>{{ item.bukti }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Tanggal:</ion-label>
+              <ion-label>{{ item.tanggal_keluar }}</ion-label>
+            </ion-item>
+
+            <div class="ion-text-end">
+              <ion-button (click)="edit(item.kd_keluar)" color="primary">
+                <ion-icon name="create-outline"></ion-icon>
+                Edit
+              </ion-button>
+              <ion-button (click)="confirmDelete(item.kd_keluar)" color="danger">
+                <ion-icon name="trash-outline"></ion-icon>
+                Delete
+              </ion-button>
+              <ion-button (click)="viewExportedData()" color="primary">
+                <ion-icon name="bar-chart-outline"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

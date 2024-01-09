@@ -1,0 +1,66 @@
+<!-- e-uang.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="Back()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Pengeluaran</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Data Pengeluaran</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Form to edit pengeluaran data -->
+      <form (ngSubmit)="Update()" #editForm="ngForm">
+        <ion-item>
+          <ion-label position="stacked">Kode Pengeluaran</ion-label>
+          <ion-input
+            type="text"
+            name="kd_pengeluaran"
+            [(ngModel)]="kd_pengeluaran"
+            required
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Keterangan</ion-label>
+          <ion-input
+            type="text"
+            name="keterangan"
+            [(ngModel)]="keterangan"
+            required
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Tanggal Keluar</ion-label>
+          <ion-input
+            type="date"
+            name="tanggal_keluar"
+            [(ngModel)]="tanggal_keluar"
+            required
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Upload Bukti</ion-label>
+          <input type="file" (change)="getFile($event)" />
+        </ion-item>
+
+        <ion-button
+          type="submit"
+          expand="full"
+          [disabled]="editForm.invalid"
+        >
+          Update
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
